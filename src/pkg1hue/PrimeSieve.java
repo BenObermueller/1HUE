@@ -10,5 +10,6 @@ package pkg1hue;
  * @author Ben Obermüller
  */
 public interface PrimeSieve {
-    
+    public boolean isPrime(int p);
+    public void printPrimes();
 }
