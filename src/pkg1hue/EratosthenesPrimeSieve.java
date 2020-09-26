@@ -33,9 +33,26 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         for(int i = 1; i<= this.maxP; i++){
             if(isPrime(i)==true){
                 System.out.println(i);
-            }else{
-                
             }
         } 
+    }
+    
+    public void printNZahlen(int max){
+        if(max<=2){
+            System.out.println("Die Obergrenze ist zu klein! Sie muss größer als zwei sein!");
+        }else{
+            for(int i = 4; i <= max; i++){
+                if(i%2 == 0){
+                    for(int y = 2; y<i; y++){
+                        int rest = i-y;
+                        if(isPrime(rest)==true){
+                            System.out.println(i +" Summe: " + i +" = " + rest +" + " + y);
+                            break;
+                        }
+                    }
+                        
+                }
+            }
+        }
     }
 }
